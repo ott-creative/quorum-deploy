@@ -4,6 +4,7 @@ version: '3.6'
 x-quorum-def:
   &quorum-def
   restart: "on-failure"
+  image: ott-quorum:latest
   build:
     context: ./
     args:
