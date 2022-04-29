@@ -14,13 +14,4 @@ cp artifacts/goQuorum/* data/quorum/validator1
 cp artifacts/goQuorum/* data/quorum/validator2
 cp artifacts/goQuorum/* data/quorum/validator3
 
-cp artifacts/validator0/* data/quorum/validator0/keys
-cp artifacts/validator1/* data/quorum/validator1/keys
-cp artifacts/validator2/* data/quorum/validator2/keys
-cp artifacts/validator3/* data/quorum/validator3/keys
-
-
-mkdir -p logs/quorum
-mkdir -p logs/quorum
-mkdir -p logs/quorum
 mkdir -p logs/quorum
