@@ -1,4 +1,7 @@
 
+# 修改为quorum-genesis-tool实际生成的路径
+mv artifacts/2022-04-29-12-51-23/* artifacts
+
 mkdir -p data/quorum/validator0/keys
 mkdir -p data/quorum/validator1/keys
 mkdir -p data/quorum/validator2/keys
