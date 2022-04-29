@@ -31,7 +31,6 @@ services:
     environment:
       - GOQUORUM_CONS_ALGO=qbft
     volumes:
-      - ./artifacts/validator0:/config/keys
       - ./data/quorum/validator0:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
@@ -47,7 +46,6 @@ services:
     environment:
       - GOQUORUM_CONS_ALGO=qbft
     volumes:
-      - ./artifacts/validator1:/config/keys
       - ./data/quorum/validator1:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
@@ -63,7 +61,6 @@ services:
     environment:
       - GOQUORUM_CONS_ALGO=qbft
     volumes:
-      - ./artifacts/validator2:/config/keys
       - ./data/quorum/validator2:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
@@ -79,7 +76,6 @@ services:
     environment:
       - GOQUORUM_CONS_ALGO=qbft
     volumes:
-      - ./artifacts/validator3:/config/keys
       - ./data/quorum/validator3:/data
       - ./logs/quorum:/var/log/quorum/
     networks:

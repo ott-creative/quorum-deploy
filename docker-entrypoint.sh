@@ -7,14 +7,13 @@ set -o pipefail
 GOQUORUM_CONS_ALGO=`echo "${GOQUORUM_CONS_ALGO:-qbft}" | tr '[:lower:]'`
 GENESIS_FILE=${GENESIS_FILE:-"/data/genesis.json"}
 
-cp -R /config/* /data
 mkdir -p /data/keystore/
 
 echo "Applying ${GENESIS_FILE} ..."
 geth --nousb --verbosity 1 --datadir=/data init ${GENESIS_FILE};
 
-cp /config/keys/accountKeystore /data/keystore/key;
-cp /config/keys/nodekey /data/geth/nodekey;
+cp /data/keys/accountKeystore /data/keystore/key;
+cp /data/keys/nodekey /data/geth/nodekey;
 
 if [ "istanbul" == "$GOQUORUM_CONS_ALGO" ];
 then
@@ -33,7 +32,7 @@ then
     export QUORUM_API="raft"
 fi
 
-export ADDRESS=$(grep -o '"address": *"[^"]*"' /config/keys/accountKeystore | grep -o '"[^"]*"$' | sed 's/"//g')
+export ADDRESS=$(grep -o '"address": *"[^"]*"' /data/keys/accountKeystore | grep -o '"[^"]*"$' | sed 's/"//g')
 
 if [[ ! -z ${QUORUM_PTM:-} ]];
 then

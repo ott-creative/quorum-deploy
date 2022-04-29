@@ -7,6 +7,11 @@ mkdir -p data/quorum/validator1/keys
 mkdir -p data/quorum/validator2/keys
 mkdir -p data/quorum/validator3/keys
 
+cp artifacts/validator0/* data/quorum/validator0/keys
+cp artifacts/validator1/* data/quorum/validator1/keys
+cp artifacts/validator2/* data/quorum/validator2/keys
+cp artifacts/validator3/* data/quorum/validator3/keys
+
 touch artifacts/goQuorum/passwords.txt
 
 cp artifacts/goQuorum/* data/quorum/validator0
