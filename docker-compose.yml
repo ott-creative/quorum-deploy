@@ -35,7 +35,7 @@ services:
       - ./logs/quorum:/var/log/quorum/
     networks:
       ott-network:
-        ipv4_address: 172.16.239.10
+        ipv4_address: 172.16.239.20
 
   validator1:
     << : *quorum-def
@@ -50,7 +50,7 @@ services:
       - ./logs/quorum:/var/log/quorum/
     networks:
       ott-network:
-        ipv4_address: 172.16.239.11
+        ipv4_address: 172.16.239.21
 
   validator2:
     << : *quorum-def
@@ -65,7 +65,7 @@ services:
       - ./logs/quorum:/var/log/quorum/
     networks:
       ott-network:
-        ipv4_address: 172.16.239.12
+        ipv4_address: 172.16.239.22
 
   validator3:
     << : *quorum-def
@@ -80,7 +80,7 @@ services:
       - ./logs/quorum:/var/log/quorum/
     networks:
       ott-network:
-        ipv4_address: 172.16.239.13
+        ipv4_address: 172.16.239.23
 
 networks:
   ott-network:

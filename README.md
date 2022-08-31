@@ -21,7 +21,7 @@ npx quorum-genesis-tool --consensus qbft --chainID 1337 --blockperiod 5 --reques
 
 ## 4 修改地址
 
-在artifacts/2022-04-29-12-51-23/goQuorum/下的disallowed-nodes.json和static-nodes.json，把host修改为docker-compose.yml中配置的ip。
+在artifacts/2022-04-29-12-51-23/goQuorum/下的 permissioned-nodes.json和static-nodes.json，把host修改为docker-compose.yml中配置的ip。
 
 ```json
 [
