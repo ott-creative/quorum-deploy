@@ -1,6 +1,6 @@
 
 # 修改为quorum-genesis-tool实际生成的路径
-mv output/2022-08-31-16-12-16/* output
+# mv output/2022-08-31-16-12-16/* output
 
 mkdir -p data/quorum/validator0/keys
 mkdir -p data/quorum/validator1/keys

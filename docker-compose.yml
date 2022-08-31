@@ -13,6 +13,8 @@ x-quorum-def:
     - 30303
     - 8545
     - 9545
+  environment:
+    - GOQUORUM_CONS_ALGO=istanbul
   healthcheck:
     test: ["CMD", "wget", "--spider", "--proxy", "off", "http://localhost:8545"]
     interval: 3s
@@ -25,11 +27,9 @@ services:
   validator0:
     << : *quorum-def
     ports:
-      - 21000:8545/tcp
+      - 22000:8545/tcp
       - 30303
       - 9545
-    environment:
-      - GOQUORUM_CONS_ALGO=qbft
     volumes:
       - ./data/quorum/validator0:/data
       - ./logs/quorum:/var/log/quorum/
@@ -40,11 +40,9 @@ services:
   validator1:
     << : *quorum-def
     ports:
-      - 21001:8545/tcp
+      - 22001:8545/tcp
       - 30303
       - 9545
-    environment:
-      - GOQUORUM_CONS_ALGO=qbft
     volumes:
       - ./data/quorum/validator1:/data
       - ./logs/quorum:/var/log/quorum/
@@ -55,11 +53,9 @@ services:
   validator2:
     << : *quorum-def
     ports:
-      - 21002:8545/tcp
+      - 22002:8545/tcp
       - 30303
       - 9545
-    environment:
-      - GOQUORUM_CONS_ALGO=qbft
     volumes:
       - ./data/quorum/validator2:/data
       - ./logs/quorum:/var/log/quorum/
@@ -70,11 +66,9 @@ services:
   validator3:
     << : *quorum-def
     ports:
-      - 21003:8545/tcp
+      - 22003:8545/tcp
       - 30303
       - 9545
-    environment:
-      - GOQUORUM_CONS_ALGO=qbft
     volumes:
       - ./data/quorum/validator3:/data
       - ./logs/quorum:/var/log/quorum/
