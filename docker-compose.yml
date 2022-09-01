@@ -34,8 +34,8 @@ services:
       - ./data/quorum/validator0:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
-      ott-network:
-        ipv4_address: 172.16.239.20
+      ott_network:
+        ipv4_address: 172.16.238.20
 
   validator1:
     << : *quorum-def
@@ -47,8 +47,8 @@ services:
       - ./data/quorum/validator1:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
-      ott-network:
-        ipv4_address: 172.16.239.21
+      ott_network:
+        ipv4_address: 172.16.238.21
 
   validator2:
     << : *quorum-def
@@ -60,8 +60,8 @@ services:
       - ./data/quorum/validator2:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
-      ott-network:
-        ipv4_address: 172.16.239.22
+      ott_network:
+        ipv4_address: 172.16.238.22
 
   validator3:
     << : *quorum-def
@@ -73,14 +73,14 @@ services:
       - ./data/quorum/validator3:/data
       - ./logs/quorum:/var/log/quorum/
     networks:
-      ott-network:
-        ipv4_address: 172.16.239.23
+      ott_network:
+        ipv4_address: 172.16.238.23
 
 networks:
-  ott-network:
-    name: ott-network
+  ott_network:
+    name: ott_network
     driver: bridge
     ipam:
       driver: default
       config:
-      - subnet: 172.16.239.0/24
+      - subnet: 172.16.238.0/24
